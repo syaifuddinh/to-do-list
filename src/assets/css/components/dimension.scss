@@ -1,0 +1,254 @@
+@use "sass:math";
+
+@for $i from 0 through 1300 {
+    .w-#{$i}, div div .w-#{$i} {
+        width:#{$i + "%"}!important;
+    }
+
+    .h-#{$i} {
+            height:#{$i + "%"};
+    }
+    .top-#{$i} {
+        top:#{$i}px;
+    }
+    .top-#{$i}-percent {
+        top:#{$i + '%'};
+    }
+    .top-minus-#{$i} {
+        top:-#{$i}px;
+    }
+    .top-minus-#{$i}-percent {
+        top:-#{$i + '%'};
+    }
+    .bottom-#{$i} {
+        bottom:#{$i}px;
+    }
+    .bottom-minus-#{$i} {
+        bottom:-#{$i}px;
+    }
+    .right-#{$i} {
+        right:#{$i}px;
+    }
+    .right-minus-#{$i} {
+        right:-#{$i}px;
+    }
+    .left-#{$i} {
+        left:#{$i}px;
+    }
+    .left-#{$i}-percent {
+        left:#{$i + '%'};
+    }
+    .left-minus-#{$i} {
+        left:-#{$i}px;
+    }
+    .w-#{$i}mm {
+            width:#{$i}mm
+    }
+    .w-#{$i}px, body div .w-#{$i}px, .form-control.w-#{$i}px {
+            width:#{$i}px;
+    }
+
+    .min-w-#{$i}px, body div .min-w-#{$i}px, .form-control.min-w-#{$i}px {
+        min-width:#{$i}px;
+    }
+
+    .m-#{$i}px {
+            margin:#{$i}px;
+    }
+
+    .pt-#{$i}px, body div .pt-#{$i}px {
+            padding-top:#{$i}px;
+    }
+
+    .pb-#{$i}px, body div .pb-#{$i}px {
+            padding-bottom:#{$i}px;
+    }
+
+    .mt-#{$i}px {
+            margin-top:#{$i}px;
+    }
+
+    .mb-#{$i}px {
+            margin-bottom:#{$i}px;
+    }
+
+    div .ml-#{$i}px {
+            margin-left:#{$i}px;
+    }
+
+    .ml-minus-#{$i}px, div .ml-minus-#{$i}px {
+            margin-left:-#{$i}px;
+    }
+
+    .mr-#{$i}px, body div .mr-#{$i}px {
+            margin-right:#{$i}px;
+    }
+
+    .mx-#{$i}px, body div .mx-#{$i}px {
+            margin-right:#{$i}px;
+            margin-left:#{$i}px;
+    }
+
+    .my-#{$i}px, body div .my-#{$i}px {
+            margin-top:#{$i}px;
+            margin-bottom:#{$i}px;
+    }
+
+    .p-#{$i}px, div .p-#{$i}px {
+        padding:#{$i}px;
+    }
+
+    .px-#{$i}px, body div .px-#{$i}px {
+        padding-left:#{$i}px !important;
+        padding-right:#{$i}px !important;
+    }
+    .py-#{$i}px, body div .py-#{$i}px {
+        padding-top:#{$i}px !important;
+        padding-bottom:#{$i}px !important;
+    }
+    
+    .pl-#{$i}px, div .pl-#{$i}px {
+        padding-left:#{$i}px;
+    }
+
+    .pr-#{$i}px, div .pr-#{$i}px {
+        padding-right:#{$i}px;
+    }
+    
+    body div .h-#{$i}px, .h-#{$i}px {
+            height:#{$i}px;
+    }    
+
+    .rounded-#{$i}px, div .rounded-#{$i}px, div .btn.rounded-#{$i}px, div.rounded-#{$i}px .modal-content {
+            border-radius:#{$i}px;
+        }
+
+    .rounded-top-left-#{$i}px {
+        border-top-left-radius: #{$i}px;
+    }
+
+    .rounded-top-right-#{$i}px {
+        border-top-right-radius: #{$i}px;
+    }
+
+    .rounded-bottom-left-#{$i}px {
+        border-bottom-left-radius: #{$i}px;
+    }
+
+    .rounded-bottom-right-#{$i}px {
+        border-bottom-right-radius: #{$i}px;
+    }
+        
+    .top-right-rounded-#{$i}px {
+        border-top-right-radius:#{$i}px;
+    }
+
+    .top-left-rounded-#{$i}px {
+        border-top-left-radius:#{$i}px;
+    }
+
+    .bottom-left-rounded-#{$i}px {
+        border-bottom-left-radius:#{$i}px;
+    }
+
+    .bottom-right-rounded-#{$i}px {
+        border-bottom-right-radius:#{$i}px;
+    }
+
+    @each $name, $size in $breakpoints {
+        @media (min-width: $size) {
+            .#{$name}-w-#{$i}px,
+            body div .#{$name}-w-#{$i}px,
+            body div .#{$name}-w-#{$i}px .modal-dialog,
+            .form-control.#{$name}-w-#{$i}px {
+                width: #{$i}px!important;
+            }
+            
+            body .#{$name}-max-w-#{$i}px .modal-dialog {
+                max-width: #{$i}px!important;
+            }
+
+            .#{$name}-w-#{$i}mm,
+            .form-control.#{$name}-w-#{$i}mm {
+                width: #{$i}mm;
+            }
+
+            body div .#{$name}-h-#{$i}px,
+            .form-control.#{$name}-h-#{$i}px {
+                height: #{$i}px;
+            }
+
+            .#{$name}-m-#{$i}px {
+                margin: #{$i}px;
+            }
+
+            div .#{$name}-mt-#{$i}px {
+                margin-top: #{$i}px;
+            }
+
+            div .#{$name}-mb-#{$i}px {
+                margin-bottom: #{$i}px;
+            }
+
+            div .#{$name}-ml-#{$i}px {
+                margin-left: #{$i}px;
+            }
+
+            .#{$name}-mr-#{$i}px {
+                margin-right: #{$i}px;
+            }
+
+            .#{$name}-p-#{$i}px, div .#{$name}-p-#{$i}px {
+                padding: #{$i}px;
+            }
+
+            .#{$name}-px-#{$i}px, div .#{$name}-px-#{$i}px {
+                padding-left: #{$i}px;
+                padding-right: #{$i}px;
+            }
+
+            .#{$name}-pl-#{$i}px, div .#{$name}-pl-#{$i}px {
+                padding-left: #{$i}px;
+            }
+
+            .#{$name}-pr-#{$i}px, body div .#{$name}-pr-#{$i}px, body  div .form-group.#{$name}-pr-#{$i}px {
+                padding-right: #{$i}px;
+            }
+            
+            .#{$name}-rounded-#{$i}px {
+                border-radius: #{$i}px;
+            }
+
+            .#{$name}-top-right-rounded-#{$i}px {
+                border-top-right-radius: #{$i}px;
+            }
+
+            .#{$name}-top-left-rounded-#{$i}px {
+                border-top-left-radius: #{$i}px;
+            }
+
+            .#{$name}-bottom-left-rounded-#{$i}px {
+                border-bottom-left-radius: #{$i}px;
+            }
+
+            .#{$name}-bottom-right-rounded-#{$i}px {
+                border-bottom-right-radius: #{$i}px;
+            }
+        }
+    }
+
+}
+
+@for $i from 0 through 4 {
+    .letter-spacing-#{$i} {
+        letter-spacing:#{math.div($i * 25, 100)}px;
+    }
+}
+
+.d-flex {
+    display:flex;
+}
+
+body {
+    padding-top:32px
+}

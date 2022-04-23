@@ -1,0 +1,13 @@
+@import "variables";
+
+@each $thickness in $thicknesses {
+    .font-weight-#{$thickness} {
+        font-weight: $thickness;
+    }
+}
+
+@for $i from 0 through 60 {
+    .fs-#{$i}px, div div .fs-#{$i}px {
+            font-size:#{$i * 0.0625}rem !important;
+    }
+}

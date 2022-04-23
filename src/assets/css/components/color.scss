@@ -1,0 +1,59 @@
+@use "sass:color";
+@use "sass:map";
+@import "variables";
+
+@each $name, $value in $theme-colors {
+    div div .hover-box-shadow-#{$name}:hover {
+      box-shadow: -4px 10px 12px 0px #{rgba($value, 0.15)};
+    }
+    div div .box-shadow-#{$name} {
+      box-shadow: -4px 10px 12px 0px #{rgba($value, 0.15)};
+    }
+
+    .bg-#{$name}, div div .bg-#{$name} {
+        background-color: $value !important;
+    }
+    .darken-bg-#{$name}, div div .darken-bg-#{$name} {
+        background-color: #{color.adjust($value, $lightness: -10%)} !important;
+    }
+    .very-darken-bg-#{$name}, div div .very-darken-bg-#{$name} {
+        background-color: #{color.adjust($value, $lightness: -30%)} !important;
+    }
+    .hover-bg-#{$name}:hover, div div .hover-bg-#{$name}:hover {
+        background-color: #{color.adjust($value, $lightness: -10%)} !important;
+    }
+    .hover-lighten-bg-#{$name}:hover, div div .hover-lighten-bg-#{$name}:hover {
+        background-color: #{color.adjust($value, $lightness: 12%)} !important;
+    }
+    .border-#{$name}, div div .border-#{$name} {
+        border-color: $value !important;
+    }
+    .text-#{$name}, div div .text-#{$name} {
+        color: $value !important;
+    }
+    .hover-text-#{$name}:hover,
+    div div .hover-text-#{$name}:hover, 
+    div div .hover-text-#{$name}:hover .text-#{$name}, 
+    div div .hover-text-#{$name}:hover span
+    {
+        color: #{color.adjust($value, $lightness: -10%)} !important;
+    }
+    .hover-lighten-text-#{$name}:hover,
+    div div .hover-lighten-text-#{$name}:hover, 
+    div div .hover-lighten-text-#{$name}:hover .text-#{$name}, 
+    div div .hover-lighten-text-#{$name}:hover span
+    {
+        color: #{color.adjust($value, $lightness: 12%)} !important;
+    }
+}
+
+a.konect-button.bg-primary:hover,
+a.konect-button.bg-primary:focus,
+button.konect-button.bg-primary:hover,
+button.konect-button.bg-primary:focus {
+     background-color: #{map.get($theme-colors, "primary")} !important;
+}
+
+body, html {
+    background-color: #f2f2f2 !important;
+}

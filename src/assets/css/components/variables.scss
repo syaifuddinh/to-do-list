@@ -1,0 +1,36 @@
+@use "sass:color";
+
+$theme-colors: (
+    "primary": #00CDB4,
+    "warning": #FFA600,
+    "dark-grey": #A0AABF,
+    "grey": #E3E8F1,
+    "light-grey": #C0C6D4,
+    "bright-grey": color.adjust(#C0C6D4, $lightness: 10%),
+    "secondary-grey": #E9ECEF,
+    "tertiary-grey": #37415180,
+    "cherry": #2D014B,
+    "black": #2E3A44,
+    "little-light-black": color.adjust(#2E3A44, $lightness: 10%),
+    "light-black": color.adjust(#2E3A44, $lightness: 20%),
+    "dark": #02001f,
+    "secondary-dark": #323049,
+    "light-dark": #1B1935,
+    "bright-dark": #6f6ab9,
+    "purple": #797FF6,
+    "light": #F9FBFC,
+    "danger": #FF5630,
+    "success": #5FC790,
+    "white": #FFFFFF,
+    "secondary-black": #18191F
+);
+$breakpoints : (
+    "xs" : 576px,
+    "sm" : 768px,
+    "md" : 992px,
+    "lg" : 1200px
+);
+$thicknesses : 400, 500, 600, 700, 800, 900;
+$text-decorations : underline, overline;
+$cursors : not-allowed, pointer;
+$borders : dotted, dashed;
